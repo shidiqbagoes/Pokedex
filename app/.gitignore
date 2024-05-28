@@ -1,0 +1,48 @@
+# Android
+/.idea
+/.gradle
+/local.properties
+/.spotless
+/.kotlin
+/.cxx
+
+# Build generated
+/build
+/captures
+/outputs
+
+# Local configuration file (sdk path, etc)
+/.local
+
+# Proguard
+/proguard-rules.pro
+
+# Dependency cache
+/.dependencies
+
+# Android Studio Navigation editor metadata
+/navigation
+
+# Android Studio IDE-specific files
+/*.iml
+/.idea/workspace.xml
+/.idea/modules.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+/.idea/dictionaries
+/.idea/caches
+/.idea/libraries
+/.idea/shelf
+/.idea/copyright
+
+# External native build files
+/.externalNativeBuild
+
+# Windows thumbnails
+/.thumbnails/
+
+# External Files
+.externalFiles
+
+# AndroidX Navigation files
+/navigation

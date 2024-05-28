@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Pokemon</string>
+    <string name="welcome">Pokemon</string>
+    <string name="encyclopedia">Encyclopedia</string>
+    <string name="pokedex">Pokedex</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="all_elements">All Elements</string>
+</resources>

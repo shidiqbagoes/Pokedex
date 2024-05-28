@@ -1,0 +1,27 @@
+<!-- res/values/colors.xml -->
+<resources>
+    <!-- Primary colors -->
+    <color name="colorPrimary">#52C2FE</color>
+    <color name="colorPrimaryVariant">#3A9AD9</color> <!-- Darker shade of primary -->
+
+    <!-- Secondary colors -->
+    <color name="colorSecondary">#FF6F61</color> <!-- Complementary or contrasting color -->
+    <color name="colorSecondaryVariant">#E85B53</color> <!-- Darker shade of secondary -->
+
+    <!-- Tertiary colors -->
+    <color name="colorTertiary">#FFD700</color> <!-- Another complementary or accent color -->
+
+    <!-- Background and surface colors -->
+    <color name="colorBackground">#FFFFFF</color>
+    <color name="colorSurface">#EEF8FF</color>
+
+    <!-- Text and icon colors -->
+    <color name="colorOnPrimary">#FFFFFF</color>
+    <color name="colorOnSecondary">#FFFFFF</color>
+    <color name="colorOnBackground">#000000</color>
+    <color name="colorOnSurface">#000000</color>
+
+    
+    <color name="white">#FFFFFF</color>
+    <color name="white_25">#40FFFFFF</color>
+</resources>

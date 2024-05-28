@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="BottomNavigationStyle" parent="Widget.Material3.BottomNavigationView">
+        <item name="itemIconTint">@color/bottom_nav_color_selector</item>
+        <item name="itemTextColor">@color/bottom_nav_color_selector</item>
+        <item name="itemRippleColor">@color/bottom_nav_color_selector</item>
+        <item name="itemActiveIndicatorStyle">@style/BottomNavigationStyle.ActiveIndicator</item>
+        <item name="backgroundTint">@color/colorOnPrimary</item>
+    </style>
+    
+    <style name="BottomNavigationStyle.ActiveIndicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@color/colorPrimary</item>
+    </style>
+
+    <style name="SearchBarStyle" parent="Widget.Material3.SearchBar">
+        <item name="shapeAppearance">@style/ShapeAppearance.Material3.Corner.Medium</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.Material3.Corner.Small</item>
+        <item name="backgroundTint">@color/colorOnPrimary</item>
+        <item name="android:textAppearance">@style/SearchBarStyle.TextAppearance</item>
+    </style>
+
+    <style name="SearchBarStyle.TextAppearance" parent="TextAppearance.Material3.LabelLarge">
+        <item name="android:textColor">@color/colorOnSurface</item>
+        <item name="hintTextColor">@color/colorOnSurface</item>
+    </style>
+
+    <style name="TranslucentChipStyle" parent="Widget.Material3.Chip.Suggestion">
+        <item name="chipSurfaceColor">@android:color/transparent</item>
+    </style>
+
+</resources>
