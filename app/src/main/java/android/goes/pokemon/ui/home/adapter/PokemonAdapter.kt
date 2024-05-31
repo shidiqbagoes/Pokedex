@@ -9,6 +9,7 @@ import android.goes.pokemon.utils.addChip
 import android.goes.pokemon.utils.capitalize
 import android.goes.pokemon.utils.colorStateList
 import android.goes.pokemon.utils.dimen
+import android.goes.pokemon.utils.drawable
 import android.goes.pokemon.utils.homeSprite
 import android.goes.pokemon.utils.lightenColor
 import android.goes.pokemon.utils.loadImage
@@ -57,8 +58,11 @@ class PokemonAdapter() : PagingDataAdapter<Pokemon, PokemonAdapter.PokemonViewHo
 
         fun bind(pokemon: Pokemon) {
             binding.tvName.text = pokemon.name.capitalize()
-            binding.ivSprite.loadImage(pokemon.displaySprite)
             binding.tvDesc.text = "Pokemon Ability #${pokemon.id}"
+            binding.ivSprite.loadImage(
+                source = pokemon.displaySprite,
+                placeHolder = context.drawable(R.drawable.pikachu_placeholder)
+            )
 
             val types = pokemon.types.distinctBy { it }
             bindChip(types)
