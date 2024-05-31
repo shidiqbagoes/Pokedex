@@ -17,8 +17,8 @@ Pokemon Encyclopedia is an Pokedex app for Android, developed using Modern Andro
 
 ## Credits
 - **Content Source:** [PokeAPI](https://pokeapi.co/)
-- **Design Reference:** [Esti](https://dribbble.com/shots/8996929-Figure-app)
-- **Font Used:** [Font](https://fonts.google.com/specimen/Raleway)
+- **Design Reference:** [Figure App by Esti](https://dribbble.com/shots/8996929-Figure-app)
+- **Font Used:** [Raleway](https://fonts.google.com/specimen/Raleway)
   
 ---
 
