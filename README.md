@@ -4,8 +4,7 @@
 Pokemon Encyclopedia is an Pokedex app for Android, developed using Modern Android Development (MAD) principles. It provides detailed information on all Pokemon, including stats, and evolution path.
 
 ## Screenshots
-<img src="https://github.com/shidiqbagoes/Pokedex/blob/master/screenshoots/Screenshot_20240531_093421_Pokemon.jpg" alt="Homepage" width="300"/>
-<img src="https://github.com/shidiqbagoes/Pokedex/blob/master/screenshoots/Screenshot_20240531_093443_Pokemon.jpg" alt="Filter" width="300"/>
+<img src="https://github.com/shidiqbagoes/Pokedex/blob/master/screenshoots/Screenshot_20240531_093421_Pokemon.jpg" alt="Homepage" width="300"/> <img src="https://github.com/shidiqbagoes/Pokedex/blob/master/screenshoots/Screenshot_20240531_093443_Pokemon.jpg" alt="Filter" width="300"/>
 
 ## Features
 - Comprehensive Database: Detailed entries for all Pokemon, including stats, abilities, and evolutions.
