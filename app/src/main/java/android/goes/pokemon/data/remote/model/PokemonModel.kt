@@ -1,5 +1,8 @@
 package android.goes.pokemon.data.remote.model
 
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
+
 data class PokemonResponse(
     val count: Int,
     val next: String?,
@@ -7,13 +10,14 @@ data class PokemonResponse(
     val results: List<Pokemon>
 )
 
+@Parcelize
 data class Pokemon(
     val name: String,
     val url: String,
     val id: Int,
     var displaySprite: String? = null,
     var types: List<String> = emptyList()
-)
+): Parcelable
 
 data class PokemonDetails(
     val id: Int,

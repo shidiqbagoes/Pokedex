@@ -94,4 +94,5 @@ ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 androidx-navigation-safeArgs = { id = "androidx.navigation.safeargs.kotlin", version.ref = "navigationFragmentKtx" }
 hilt = { id = "dagger.hilt.android.plugin", version.ref = "hilt" }
+kotlin-parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlin" }
 

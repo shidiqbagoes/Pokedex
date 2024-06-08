@@ -7,4 +7,6 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="all_elements">All Elements</string>
+
+    <string name="paging_footer">Cannot load items, tap to retry</string>
 </resources>

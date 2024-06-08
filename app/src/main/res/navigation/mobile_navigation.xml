@@ -9,7 +9,26 @@
         android:id="@+id/navigation_home"
         android:name="android.goes.pokemon.ui.home.HomeFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/actionPokemonDetail"
+            app:destination="@id/detail_navigation_graph">
+
+            <argument
+                android:name="adapterPosition"
+                app:argType="integer"
+                android:defaultValue="0"/>
+
+            <argument
+                android:name="pokemon"
+                app:argType="android.goes.pokemon.data.remote.model.Pokemon"
+                app:nullable="true"
+                android:defaultValue="@null"/>
+
+        </action>
+
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_dashboard"
@@ -22,4 +41,7 @@
         android:name="android.goes.pokemon.ui.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
+
+    <include app:graph="@navigation/detail_navigation_graph"/>
+
 </navigation>

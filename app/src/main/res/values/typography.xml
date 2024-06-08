@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Bold Text Appearance -->
+    <style name="TextAppearance.YourApp.Bold" parent="TextAppearance.Material3.LabelLarge">
+        <item name="fontFamily">@font/montserrat_bold</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!-- Light Text Appearance -->
+    <style name="TextAppearance.YourApp.Light" parent="TextAppearance.Material3.BodySmall">
+        <item name="fontFamily">@font/montserrat_light</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!-- Medium Text Appearance -->
+    <style name="TextAppearance.YourApp.Medium" parent="TextAppearance.Material3.BodySmall">
+        <item name="fontFamily">@font/montserrat_medium</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!-- Semi-Bold Text Appearance -->
+    <style name="TextAppearance.YourApp.SemiBold" parent="TextAppearance.Material3.LabelMedium">
+        <item name="fontFamily">@font/montserrat_semibold</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!-- Thin Text Appearance -->
+    <style name="TextAppearance.YourApp.Thin" parent="TextAppearance.Material3.BodySmall">
+        <item name="fontFamily">@font/montserrat_thin</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+</resources>

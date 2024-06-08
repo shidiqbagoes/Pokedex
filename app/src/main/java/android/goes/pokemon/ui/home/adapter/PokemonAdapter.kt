@@ -22,7 +22,9 @@ import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.chip.ChipDrawable
+import com.google.android.material.imageview.ShapeableImageView
 import com.google.android.material.shape.ShapeAppearanceModel
+import com.google.android.material.textview.MaterialTextView
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
@@ -58,11 +60,15 @@ class PokemonAdapter() : PagingDataAdapter<Pokemon, PokemonAdapter.PokemonViewHo
 
         fun bind(pokemon: Pokemon) {
             binding.tvName.text = pokemon.name.capitalize()
+            binding.tvName.transitionName = "shared_pokemon_text_$bindingAdapterPosition"
+
             binding.tvDesc.text = "Pokemon Ability #${pokemon.id}"
             binding.ivSprite.loadImage(
                 source = pokemon.displaySprite,
                 placeHolder = context.drawable(R.drawable.pikachu_placeholder)
             )
+
+            binding.ivSprite.transitionName = "shared_pokemon_image_$bindingAdapterPosition"
 
             val types = pokemon.types.distinctBy { it }
             bindChip(types)
@@ -73,6 +79,16 @@ class PokemonAdapter() : PagingDataAdapter<Pokemon, PokemonAdapter.PokemonViewHo
                 intArrayOf(primaryType.color, lightenColor(primaryType.color))
             )
             binding.ivBgColor.background = gradientDrawable
+
+            // Bind Click Callback
+            binding.root.setOnClickListener {
+                onItemClickCallback.invoke(
+                    pokemon,
+                    bindingAdapterPosition,
+                    binding.ivSprite,
+                    binding.tvName
+                )
+            }
         }
 
         private fun bindChip(types: List<String>) {
@@ -102,5 +118,16 @@ class PokemonAdapter() : PagingDataAdapter<Pokemon, PokemonAdapter.PokemonViewHo
                 )
             }
         }
+    }
+
+    private var onItemClickCallback: (
+        item: Pokemon,
+        position: Int,
+        imageView: ShapeableImageView,
+        textView: MaterialTextView
+    ) -> Unit = { _, _, _, _ -> }
+
+    fun setOnItemClickListener(action: (item: Pokemon, position: Int, imageView: ShapeableImageView, textView: MaterialTextView) -> Unit) {
+        onItemClickCallback = action
     }
 }

@@ -12,11 +12,13 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import android.goes.pokemon.databinding.FragmentHomeBinding
 import android.goes.pokemon.ui.home.adapter.PokemonAdapter
+import android.goes.pokemon.ui.loading.FooterLoadAdapter
 import android.goes.pokemon.utils.PokemonType
 import android.goes.pokemon.utils.addChip
 import android.goes.pokemon.utils.capitalize
 import android.goes.pokemon.utils.dimen
 import android.goes.pokemon.utils.font
+import android.goes.pokemon.utils.navController
 import android.goes.pokemon.utils.viewBinding
 import android.goes.pokemon.viewmodel.GeneralViewModel
 import android.widget.Toast
@@ -25,6 +27,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import androidx.navigation.fragment.FragmentNavigatorExtras
 import com.google.android.material.chip.Chip
 import com.google.android.material.chip.ChipDrawable
 import com.google.android.material.shape.ShapeAppearanceModel
@@ -44,7 +47,11 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     private val binding by viewBinding<FragmentHomeBinding>()
     private val viewModel by viewModels<GeneralViewModel>()
 
-    private val pokemonAdapter by lazy { PokemonAdapter() }
+    private val pokemonAdapter by lazy {
+        PokemonAdapter().apply {
+            withLoadStateFooter(FooterLoadAdapter())
+        }
+    }
 
     // Pokemon Type list used to store user input
     private val selectedPokemonType = mutableListOf<PokemonType>()
@@ -59,6 +66,8 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
     private fun bindAdapter() {
         binding.rvPokemonList.adapter = pokemonAdapter
+
+        onAdapterClickCallback()
     }
 
     private fun onPokemonRequestObserved() {
@@ -144,5 +153,21 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         PokemonType.Ice,
         PokemonType.Grass,
     )
+
+    private fun onAdapterClickCallback() {
+        pokemonAdapter.setOnItemClickListener { item, position, imageView, textView ->
+            val extras = FragmentNavigatorExtras(
+                imageView to imageView.transitionName,
+                textView to textView.transitionName
+            )
+
+            val action = HomeFragmentDirections.actionPokemonDetail(
+                adapterPosition = position,
+                pokemon = item
+            )
+
+            navController.navigate(action, extras)
+        }
+    }
 
 }
